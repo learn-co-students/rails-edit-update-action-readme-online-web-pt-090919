@@ -1,5 +1,5 @@
-<%= form_tag articles_path do %>
-  <label>Article title:</label><br>
+<%= form_for(@article, url: articles_path) do %>
+  <label>Article title:<br>
   <%= text_field_tag :title %><br>
 
   <label>Article Description</label><br>
@@ -7,3 +7,5 @@
 
   <%= submit_tag "Submit Article" %>
 <% end %>
+
+<%= link_to 'All Articles', articles_path %>
